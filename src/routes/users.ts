@@ -4,7 +4,7 @@ import { z } from 'zod'
 import { randomUUID } from 'node:crypto'
 
 export async function usersRoutes(app: FastifyInstance) {
-  app.post('/users', async (request, reply) => {
+  app.post('/', async (request, reply) => {
     const bodySchema = z.object({
       name: z.string(),
       email: z.string().email(),
@@ -45,7 +45,7 @@ export async function usersRoutes(app: FastifyInstance) {
     return reply.status(201).send()
   })
 
-  app.post('/users/auth', async (request, reply) => {
+  app.post('/auth', async (request, reply) => {
     const bodySchema = z.object({
       email: z.string().email(),
       password: z.string(),
