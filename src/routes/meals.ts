@@ -32,7 +32,7 @@ export async function mealsRoutes(app: FastifyInstance) {
     return reply.status(201).send()
   })
 
-  app.get('/', async (request, reply) => {
+  app.get('/', async (request) => {
     const meals = await knex('meals').where({
       user_id: request.user.id,
     })
@@ -122,7 +122,7 @@ export async function mealsRoutes(app: FastifyInstance) {
     return reply.status(204).send()
   })
 
-  app.get('/metrics', async (request, reply) => {
+  app.get('/metrics', async (request) => {
     const meals = await knex('meals')
       .where({
         user_id: request.user.id,

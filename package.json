@@ -3,9 +3,13 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "engines": {
+    "node": ">=18.x"
+  },
   "scripts": {
     "dev": "tsx watch src/server.ts",
     "lint": "eslint src --ext .ts --fix",
+    "build": "tsup src --out-dir build",
     "knex": "node --no-warnings --loader tsx ./node_modules/knex/bin/cli.js --knexfile ./knexfile.ts"
   },
   "keywords": [],
@@ -15,6 +19,7 @@
     "@rocketseat/eslint-config": "^1.3.0",
     "@types/node": "^20.4.1",
     "eslint": "^8.44.0",
+    "tsup": "^7.1.0",
     "tsx": "^3.12.7",
     "typescript": "^5.1.6"
   },
