@@ -13,7 +13,6 @@ Desenvolvi uma aplicação back-end completa para fazer o controle de refeiçõe
 
 ## extras
 
-- A aplicação está hospedada utilizando [Render](https://render.com/), segue URL para acesso -> https://daily-diet-api-esr7.onrender.com/
 - Todos os endpoints estão protegidos por autenticação, exceto os de cadastro e autenticação de usuários.
 - Existe um arquivo chamado `Insomnia_2023-07-10.json` na raiz do projeto que pode ser importado no Insomnia para testar os endpoints.
 
